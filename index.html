@@ -19,103 +19,135 @@
                </p>
 
                <form>
-                  <div class="form-group">
-                     <label for="stock-concentration"
-                        >Stock Concentration</label
-                     >
-                     <input
-                        class="form-control calculate"
-                        id="stock-concentration"
-                        aria-describedby="stock-concentration-help"
-                        placeholder="stock-concentration"
-                        value="91"
-                     />
-                     <small
-                        id="stock-concentration-help"
-                        class="form-text text-muted"
-                        >Enter the ABV of your stock (e.g. isopropyl alcohol
-                        solution).</small
-                     >
-                  </div>
-
-                  <div class="form-group">
-                     <label for="final-concentration"
-                        >Final Concentration</label
-                     >
-                     <input
-                        class="form-control calculate"
-                        id="final-concentration"
-                        aria-describedby="final-concentration-help"
-                        placeholder="final-concentration"
-                        value="65"
-                     />
-                     <small
-                        id="final-concentration-help"
-                        class="form-text text-muted"
-                        >Enter the desired alcohol percentage for your
-                        hand-sanitizer.</small
-                     >
-                  </div>
-
                   <div class="row">
+                     <div class="col-12 col-sm-6">
+                        <label for="stock-concentration"
+                           >Stock Concentration</label
+                        >
+                        <div class="form-group">
+                           <div class="row">
+                              <div class="col-4 col-sm-12">
+                                 <input
+                                    class="form-control calculate"
+                                    id="stock-concentration"
+                                    aria-describedby="stock-concentration-help"
+                                    value="91"
+                                 />
+                              </div>
+                              <div class="col-8 col-sm-12">
+                                 <small
+                                    id="stock-concentration-help"
+                                    class="form-text text-muted"
+                                    >Enter the ABV of your stock (e.g. isopropyl
+                                    alcohol solution).</small
+                                 >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-12 col-sm-6">
+                        <label for="final-concentration"
+                           >Final Concentration</label
+                        >
+                        <div class="form-group">
+                           <div class="row">
+                              <div class="col-4 col-sm-12">
+                                 <input
+                                    class="form-control calculate"
+                                    id="final-concentration"
+                                    aria-describedby="final-concentration-help"
+                                    value="65"
+                                 />
+                              </div>
+                              <div class="col-8 col-sm-12">
+                                 <small
+                                    id="final-concentration-help"
+                                    class="form-text text-muted"
+                                    >Enter the desired alcohol percentage for
+                                    your hand-sanitizer.</small
+                                 >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
                      <div class="col-12">
                         <p>
                            Set one of these volumes and the other two will be
                            calculated for you. Any units will work.
                         </p>
                      </div>
+
                      <div class="col-12 col-sm-4">
+                        <label for="stock-volume">Stock Volume</label>
                         <div class="form-group">
-                           <label for="stock-volume">Stock Volume</label>
-                           <input
-                              class="form-control calculate"
-                              id="stock-volume"
-                              aria-describedby="stock-volume-help"
-                              placeholder="stock-volume"
-                              value=""
-                           />
-                           <small
-                              id="stock-volume-help"
-                              class="form-text text-muted"
-                              >The amount of stock (e.g. isopropyl alcohol) to
-                              use.</small
-                           >
+                           <div class="row">
+                              <div class="col-4 col-sm-12">
+                                 <input
+                                    class="form-control calculate"
+                                    id="stock-volume"
+                                    aria-describedby="stock-volume-help"
+                                    value=""
+                                 />
+                              </div>
+                              <div class="col-8 col-sm-12">
+                                 <small
+                                    id="stock-volume-help"
+                                    class="form-text text-muted"
+                                    >The amount of stock (e.g. isopropyl
+                                    alcohol) to use.</small
+                                 >
+                              </div>
+                           </div>
                         </div>
                      </div>
+
                      <div class="col-12 col-sm-4">
+                        <label for="dilutant-volume">Dilutant Volume</label>
                         <div class="form-group">
-                           <label for="dilutant-volume">Dilutant Volume</label>
-                           <input
-                              class="form-control calculate"
-                              id="dilutant-volume"
-                              aria-describedby="dilutant-volume-help"
-                              placeholder="dilutant-volume"
-                              value=""
-                           />
-                           <small
-                              id="dilutant-volume-help"
-                              class="form-text text-muted"
-                              >The amount of dilutant (e.g. aloe vera) to
-                              use.</small
-                           >
+                           <div class="row">
+                              <div class="col-4 col-sm-12">
+                                 <input
+                                    class="form-control calculate"
+                                    id="dilutant-volume"
+                                    aria-describedby="dilutant-volume-help"
+                                    value=""
+                                 />
+                              </div>
+                              <div class="col-8 col-sm-12">
+                                 <small
+                                    id="dilutant-volume-help"
+                                    class="form-text text-muted"
+                                    >The amount of dilutant (e.g. aloe vera) to
+                                    use.</small
+                                 >
+                              </div>
+                           </div>
                         </div>
                      </div>
+
                      <div class="col-12 col-sm-4">
+                        <label for="final-volume">Final Volume</label>
                         <div class="form-group">
-                           <label for="final-volume">Final Volume</label>
-                           <input
-                              class="form-control calculate"
-                              id="final-volume"
-                              aria-describedby="final-volume-help"
-                              placeholder="final-volume"
-                              value=""
-                           />
-                           <small
-                              id="final-volume-help"
-                              class="form-text text-muted"
-                              >The total amount of hand-sanitizer to
-                              make.</small
-                           >
+                           <div class="row">
+                              <div class="col-4 col-sm-12">
+                                 <input
+                                    class="form-control calculate"
+                                    id="final-volume"
+                                    aria-describedby="final-volume-help"
+                                    value=""
+                                 />
+                              </div>
+                              <div class="col-8 col-sm-12">
+                                 <small
+                                    id="final-volume-help"
+                                    class="form-text text-muted"
+                                    >The total amount of hand-sanitizer to
+                                    make.</small
+                                 >
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
