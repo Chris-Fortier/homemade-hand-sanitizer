@@ -10,12 +10,12 @@ function calculate() {
    console.log("desiredVolume", aloeRecipe);
    $("#iso-recipe").text(
       String(isoRecipe + 0.5).split(".")[0] +
-         " mL of " +
+         " mL " +
          ingredientABV +
          "% Isopropyl Alcohol"
    ); // put the amount of iso needed to to page
    $("#aloe-recipe").text(
-      String(aloeRecipe + 0.5).split(".")[0] + " mL of Aloe Vera"
+      String(aloeRecipe + 0.5).split(".")[0] + " mL Aloe Vera"
    ); // put the amount of aloe needed to to page
 }
 
