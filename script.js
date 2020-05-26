@@ -67,16 +67,62 @@ function makeNiceNumber(number) {
    }
 }
 
-$("#final-concentration").keyup(function () {
+function removeConcentrationErrors() {
+   // console.log("okay");
+   $("#stock-concentration").removeClass("is-invalid");
+   $("#final-concentration").removeClass("is-invalid");
+   $("#stock-concentration-help").removeClass("text-danger");
+   $("#stock-concentration-help").text(
+      "Enter the ABV of your stock (e.g. isopropyl alcohol solution)."
+   );
+   $("#final-concentration-help").removeClass("text-danger");
+   $("#final-concentration-help").text(
+      "Enter the desired alcohol percentage for your hand-sanitizer."
+   );
+}
+
+// What happens when the user edits stock-concentration
+$("#stock-concentration").keyup(function () {
+   // set the three volumes to blank because we don't yet know which two to calculate
    $("#stock-volume").val("");
    $("#dilutant-volume").val("");
    $("#final-volume").val("");
+
+   let stockConcentration = parseFloat($("#stock-concentration").val());
+   let finalConcentration = parseFloat($("#final-concentration").val());
+
+   // console.log(stockConcentration, " must be > ", finalConcentration);
+   if (stockConcentration <= finalConcentration) {
+      $("#stock-concentration").addClass("is-invalid");
+      $("#stock-concentration-help").addClass("text-danger");
+      $("#stock-concentration-help").text(
+         "Stock concentration must be greater than final concentration."
+      );
+   } else {
+      removeConcentrationErrors();
+   }
 });
 
-$("#stock-concentration").keyup(function () {
+// What happens when the user edits final-concentration
+$("#final-concentration").keyup(function () {
+   // set the three volumes to blank because we don't yet know which two to calculate
    $("#stock-volume").val("");
    $("#dilutant-volume").val("");
    $("#final-volume").val("");
+
+   let stockConcentration = parseFloat($("#stock-concentration").val());
+   let finalConcentration = parseFloat($("#final-concentration").val());
+
+   // console.log(stockConcentration, " must be > ", finalConcentration);
+   if (stockConcentration <= finalConcentration) {
+      $("#final-concentration").addClass("is-invalid");
+      $("#final-concentration-help").addClass("text-danger");
+      $("#final-concentration-help").text(
+         "Final concentration must be less than stock concentration."
+      );
+   } else {
+      removeConcentrationErrors();
+   }
 });
 
 $("#stock-volume").keyup(function () {
@@ -92,7 +138,6 @@ $("#stock-volume").keyup(function () {
 });
 
 $("#dilutant-volume").keyup(function () {
-   console.log("sdfsdf");
    let finalConcentration = $("#final-concentration").val();
    let stockConcentration = $("#stock-concentration").val();
 
