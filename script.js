@@ -54,6 +54,19 @@
 //    return output;
 // }
 
+function makeNiceNumber(number) {
+   if (number >= 100) {
+      return String(number + 0.5).split(".")[0];
+   }
+   // else if (number >= 10) {
+   //    console.log(">=10");
+   //    return String(number + 0.05).slice(0, 4);
+   // }
+   else {
+      return String(number + 0.005).slice(0, 4);
+   }
+}
+
 $("#final-concentration").keyup(function () {
    $("#stock-volume").val("");
    $("#dilutant-volume").val("");
@@ -74,8 +87,8 @@ $("#stock-volume").keyup(function () {
 
    finalVolume = stockVolume / (finalConcentration / stockConcentration);
    dilutantVolume = finalVolume - stockVolume;
-   $("#dilutant-volume").val(String(dilutantVolume + 0.5).split(".")[0]);
-   $("#final-volume").val(String(finalVolume + 0.5).split(".")[0]);
+   $("#dilutant-volume").val(makeNiceNumber(dilutantVolume));
+   $("#final-volume").val(makeNiceNumber(finalVolume));
 });
 
 $("#dilutant-volume").keyup(function () {
@@ -89,8 +102,8 @@ $("#dilutant-volume").keyup(function () {
       -(finalConcentration * dilutantVolume) /
       (finalConcentration - stockConcentration);
    finalVolume = stockVolume / (finalConcentration / stockConcentration);
-   $("#stock-volume").val(String(stockVolume + 0.5).split(".")[0]);
-   $("#final-volume").val(String(finalVolume + 0.5).split(".")[0]);
+   $("#stock-volume").val(makeNiceNumber(stockVolume));
+   $("#final-volume").val(makeNiceNumber(finalVolume));
 });
 
 $("#final-volume").keyup(function () {
@@ -106,8 +119,8 @@ $("#final-volume").keyup(function () {
    // ) {
    stockVolume = (finalConcentration / stockConcentration) * finalVolume;
    dilutantVolume = finalVolume - stockVolume;
-   $("#stock-volume").val(String(stockVolume + 0.5).split(".")[0]);
-   $("#dilutant-volume").val(String(dilutantVolume + 0.5).split(".")[0]);
+   $("#stock-volume").val(makeNiceNumber(stockVolume));
+   $("#dilutant-volume").val(makeNiceNumber(dilutantVolume));
    // } else {
    //    $("#stock-volume").val("");
    //    $("#dilutant-volume").val("");

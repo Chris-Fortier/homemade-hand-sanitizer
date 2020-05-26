@@ -14,28 +14,11 @@
                <h2>Homemade Hand Sanitizer Calculator</h2>
 
                <p>
-                  Set both the final concentration and stock concentration.
+                  Set the alcohol percentages of your isopropyl stock and what
+                  you want your hand sanitizer to be.
                </p>
 
                <form>
-                  <div class="form-group">
-                     <label for="final-concentration"
-                        >Final Concentration</label
-                     >
-                     <input
-                        class="form-control calculate"
-                        id="final-concentration"
-                        aria-describedby="final-concentration-help"
-                        placeholder="final-concentration"
-                        value="65"
-                     />
-                     <small
-                        id="final-concentration-help"
-                        class="form-text text-muted"
-                        >CDC recommends using ABHR with greater than 60% ethanol
-                        or 70% isopropanol.</small
-                     >
-                  </div>
                   <div class="form-group">
                      <label for="stock-concentration"
                         >Stock Concentration</label
@@ -50,16 +33,35 @@
                      <small
                         id="stock-concentration-help"
                         class="form-text text-muted"
-                        >Enter the ABV of your stock (e.g. isopropal alcohol
-                        spolution).</small
+                        >Enter the ABV of your stock (e.g. isopropyl alcohol
+                        solution).</small
+                     >
+                  </div>
+
+                  <div class="form-group">
+                     <label for="final-concentration"
+                        >Final Concentration</label
+                     >
+                     <input
+                        class="form-control calculate"
+                        id="final-concentration"
+                        aria-describedby="final-concentration-help"
+                        placeholder="final-concentration"
+                        value="65"
+                     />
+                     <small
+                        id="final-concentration-help"
+                        class="form-text text-muted"
+                        >Enter the desired alcohol percentage for your
+                        hand-sanitizer.</small
                      >
                   </div>
 
                   <div class="row">
                      <div class="col-12">
                         <p>
-                           Set one of these three and the other two will be
-                           calculated for you.
+                           Set one of these volumes and the other two will be
+                           calculated for you. Any units will work.
                         </p>
                      </div>
                      <div class="col-12 col-sm-4">
@@ -111,8 +113,8 @@
                            <small
                               id="final-volume-help"
                               class="form-text text-muted"
-                              >The total amount of hand-sanitizer to make in
-                              mL.</small
+                              >The total amount of hand-sanitizer to
+                              make.</small
                            >
                         </div>
                      </div>
@@ -122,7 +124,7 @@
                      Calculate
                   </a> -->
                </form>
-               <h2>Your Recipe</h2>
+               <!-- <h2>Your Recipe</h2> -->
                <!-- <div
                   class="alert alert-primary"
                   role="alert"
