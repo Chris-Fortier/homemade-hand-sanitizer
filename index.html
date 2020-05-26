@@ -9,71 +9,134 @@
       <div class="container-fluid my-5">
          <div class="row">
             <div
-               class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-3"
+               class="offset-0 col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 offset-lg-3 col-lg-6 offset-xl-4 col-xl-4"
             >
                <h2>Homemade Hand Sanitizer Calculator</h2>
 
                <p>
-                  Change the three values and scroll down to see your recipe.
+                  Set both the final concentration and stock concentration.
                </p>
 
                <form>
                   <div class="form-group">
-                     <label for="desired-volume">Desired Volume</label>
+                     <label for="final-concentration"
+                        >Final Concentration</label
+                     >
                      <input
                         class="form-control calculate"
-                        id="desired-volume"
-                        aria-describedby="desired-volume-help"
-                        placeholder="desired-volume"
-                        value="70"
+                        id="final-concentration"
+                        aria-describedby="final-concentration-help"
+                        placeholder="final-concentration"
+                        value="65"
                      />
                      <small
-                        id="desired-volume-help"
+                        id="final-concentration-help"
                         class="form-text text-muted"
-                        >The desired amount of hand-sanitizer you want to make
-                        in mL.</small
-                     >
-                  </div>
-                  <div class="form-group">
-                     <label for="desired-ABV">Desired ABV</label>
-                     <input
-                        class="form-control calculate"
-                        id="desired-ABV"
-                        aria-describedby="desired-ABV-help"
-                        placeholder="desired-ABV"
-                        value="60"
-                     />
-                     <small id="desired-ABV-help" class="form-text text-muted"
                         >CDC recommends using ABHR with greater than 60% ethanol
                         or 70% isopropanol.</small
                      >
                   </div>
                   <div class="form-group">
-                     <label for="ingredient-ABV">Ingredient ABV</label>
+                     <label for="stock-concentration"
+                        >Stock Concentration</label
+                     >
                      <input
                         class="form-control calculate"
-                        id="ingredient-ABV"
-                        aria-describedby="ingredient-ABV-help"
-                        placeholder="ingredient-ABV"
+                        id="stock-concentration"
+                        aria-describedby="stock-concentration-help"
+                        placeholder="stock-concentration"
                         value="91"
                      />
                      <small
-                        id="ingredient-ABV-help"
+                        id="stock-concentration-help"
                         class="form-text text-muted"
-                        >Enter the ABV of your isopropal alcohol.</small
+                        >Enter the ABV of your stock (e.g. isopropal alcohol
+                        spolution).</small
                      >
                   </div>
+
+                  <div class="row">
+                     <div class="col-12">
+                        <p>
+                           Set one of these three and the other two will be
+                           calculated for you.
+                        </p>
+                     </div>
+                     <div class="col-12 col-sm-4">
+                        <div class="form-group">
+                           <label for="stock-volume">Stock Volume</label>
+                           <input
+                              class="form-control calculate"
+                              id="stock-volume"
+                              aria-describedby="stock-volume-help"
+                              placeholder="stock-volume"
+                              value=""
+                           />
+                           <small
+                              id="stock-volume-help"
+                              class="form-text text-muted"
+                              >The amount of stock (e.g. isopropyl alcohol) to
+                              use.</small
+                           >
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-4">
+                        <div class="form-group">
+                           <label for="dilutant-volume">Dilutant Volume</label>
+                           <input
+                              class="form-control calculate"
+                              id="dilutant-volume"
+                              aria-describedby="dilutant-volume-help"
+                              placeholder="dilutant-volume"
+                              value=""
+                           />
+                           <small
+                              id="dilutant-volume-help"
+                              class="form-text text-muted"
+                              >The amount of dilutant (e.g. aloe vera) to
+                              use.</small
+                           >
+                        </div>
+                     </div>
+                     <div class="col-12 col-sm-4">
+                        <div class="form-group">
+                           <label for="final-volume">Final Volume</label>
+                           <input
+                              class="form-control calculate"
+                              id="final-volume"
+                              aria-describedby="final-volume-help"
+                              placeholder="final-volume"
+                              value=""
+                           />
+                           <small
+                              id="final-volume-help"
+                              class="form-text text-muted"
+                              >The total amount of hand-sanitizer to make in
+                              mL.</small
+                           >
+                        </div>
+                     </div>
+                  </div>
+
                   <!-- <a class="btn btn-primary" id="calculate-button" href="#">
                      Calculate
                   </a> -->
                </form>
                <h2>Your Recipe</h2>
-               <div class="alert alert-primary" role="alert" id="iso-recipe">
+               <!-- <div
+                  class="alert alert-primary"
+                  role="alert"
+                  id="stock-volume"
+               >
                   The amount of isopropyl alcohol you need will go here.
                </div>
-               <div class="alert alert-primary" role="alert" id="aloe-recipe">
+               <div
+                  class="alert alert-primary"
+                  role="alert"
+                  id="dillution-volume"
+               >
                   The amount of aloe vera you will need will go here.
-               </div>
+               </div> -->
                <img src="images\photo.jpg" width="100%" />
             </div>
             <!-- </div> -->
